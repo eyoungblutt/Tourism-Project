@@ -39,18 +39,28 @@
         <h5>We'd love to hear what you think!</h5>
       </div>
 
-      <form>
-        <label>Full Name</label>
-        <input type="text" name="fullName" id="fullName" required />
-
+      <form action="https://formspree.io/f/xjvlavaw" method="POST">
+        <label>First Name</label>
+        <input type="text" name="firstName" id="firstName" required />
+        <label>Last Name</label>
+        <input type="text" name="lastName" id="lastName" required />
         <label>Age</label>
-        <input type="number" name="age" id="age" required />
+        <input type="number" name="age" id="age" min="1" max="99" required />
         <label>Contact number</label>
-        <input type="tel" name="tel" id="tel" required />
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
+
+        <label>Enquiry type</label>
+        <select>
+          <option>Select</option>
+          <option>Enquiry</option>
+          <option>Review</option>
+          <option>Complaint</option>
+        </select>
+
         <textarea
           type="text"
-          name="contact"
-          id="comment"
+          name="message"
+          id="message"
           rows="7"
           cols="50"
           required
