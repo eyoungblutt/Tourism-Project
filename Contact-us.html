@@ -36,10 +36,32 @@
       <h3>Contact Us</h3>
 
       <div class="main-text">
-        <h5>Let us know your questions of feedback</h5>
-
-        <p></p>
+        <h5>We'd love to hear what you think!</h5>
       </div>
+
+      <form>
+        <label>Full Name</label>
+        <input type="text" name="fullName" id="fullName" required />
+
+        <label>Age</label>
+        <input type="number" name="age" id="age" required />
+        <label>Contact number</label>
+        <input type="tel" name="tel" id="tel" required />
+        <textarea
+          type="text"
+          name="contact"
+          id="comment"
+          rows="7"
+          cols="50"
+          required
+        >
+Let us know what you think.</textarea
+        >
+
+        <button type="submit">Submit</button>
+
+        <button type="reset">Clear</button>
+      </form>
     </main>
   </body>
 </html>
