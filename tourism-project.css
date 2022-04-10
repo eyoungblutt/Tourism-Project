@@ -1,1 +1,30 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+}
 
+h3 {
+  display: flex;
+  justify-content: center;
+  background-color: papayawhip;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+  background-color: goldenrod;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  background-color: peru;
+}
+
+.navigation-bar-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: bisque;
+}

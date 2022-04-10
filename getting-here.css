@@ -1,0 +1,35 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 10% 10% 60%;
+}
+
+.main-text {
+  grid-area: 3 / 2 / 4 / 3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+h3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.main-information {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+iframe {
+  height: 200px;
+  width: 200px;
+}
+.navigation-bar {
+  grid-area: 2 / 1 / 5 / 2;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
