@@ -5,30 +5,32 @@
 }
 
 .main-container__website-banner h1 {
-  grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1/1/2/3;
   font-size: 50px;
   color: #f8b77c;
 }
 
 form {
-  grid-area: 4 / 2 / 5 / 3;
+  grid-area: 4/2/5/3;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 h3 {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2/2/3/3;
 }
 
 .main-text {
-  grid-area: 3 / 2 / 4 / 3;
+  grid-area: 3/2/4/3;
 }
 
 .navigation-bar {
-  grid-area: 2 / 1 / 5 / 2;
+  grid-area: 2/1/5/2;
   list-style-type: none;
-  a {
-    text-decoration: none;
-  }
 }
+.navigation-bar a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=contacu-us.css.map */

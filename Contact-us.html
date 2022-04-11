@@ -8,10 +8,13 @@
     <title>Visit Port Macquarie</title>
     <link rel="stylesheet" href="tourism-project.css" />
     <link rel="stylesheet" href="contacu-us.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+    </style>
   </head>
 
   <body>
-    <main class="grid-container">
+    <main class="main-container__website-banner">
       <h1>Visit Port Macquarie</h1>
 
       <nav class="navigation-bar">
@@ -40,24 +43,36 @@
         <h5>We'd love to hear what you think!</h5>
       </div>
 
-      <form action="https://formspree.io/f/xjvlavaw" method="POST">
-        <label>First Name</label>
-        <input type="text" name="firstName" id="firstName" required />
-        <label>Last Name</label>
-        <input type="text" name="lastName" id="lastName" required />
-        <label>Age</label>
-        <input type="number" name="age" id="age" min="1" max="99" required />
-        <label>Contact number</label>
-        <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
-
-        <label>Enquiry type</label>
-        <select>
-          <option>Select</option>
-          <option>Enquiry</option>
-          <option>Review</option>
-          <option>Complaint</option>
-        </select>
-
+      <form
+        clas="contact-form"
+        action="https://formspree.io/f/xjvlavaw"
+        method="POST"
+      >
+        <div>
+          <label>First Name</label>
+          <input type="text" name="firstName" id="firstName" required />
+        </div>
+        <div>
+          <label>Last Name</label>
+          <input type="text" name="lastName" id="lastName" required />
+        </div>
+        <div>
+          <label>Age</label>
+          <input type="number" name="age" id="age" min="1" max="99" required />
+        </div>
+        <div>
+          <label>Contact number</label>
+          <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
+        </div>
+        <div>
+          <label>Enquiry type</label>
+          <select>
+            <option>Select</option>
+            <option>Enquiry</option>
+            <option>Review</option>
+            <option>Complaint</option>
+          </select>
+        </div>
         <textarea
           type="text"
           name="message"
@@ -68,10 +83,11 @@
         >
 Let us know what you think.</textarea
         >
+        <div class="form-buttons">
+          <button class="button" type="submit">Submit</button>
 
-        <button type="submit">Submit</button>
-
-        <button type="reset">Clear</button>
+          <button class="button" type="reset">Clear</button>
+        </div>
       </form>
     </main>
   </body>
