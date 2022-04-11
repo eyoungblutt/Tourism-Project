@@ -1,30 +1,51 @@
-h1 {
-  display: flex;
-  justify-content: center;
-  background-color: azure;
+$primary-color: #f8b77c;
+$primary-font: "Grape Nuts", cursive;
+$sub-color: #3a9dbe;
+$text-color: #54b0c9;
+$nav-color: #bcc8b7;
+
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "banner banner"
+    "nav  heading"
+    "nav  sub-heading"
+    "nav  main";
+  grid-area: banner;
 }
 
-h3 {
+.main-container__website-banner {
+  grid-area: banner;
   display: flex;
   justify-content: center;
-  background-color: papayawhip;
+  font-family: $primary-font;
+  color: $primary-color;
 }
 
-h5 {
-  display: flex;
-  justify-content: center;
-  background-color: goldenrod;
+.main-container__sub-banner {
+  grid-area: heading;
 }
 
-p {
-  display: flex;
-  justify-content: center;
-  background-color: peru;
+.main-container__main-text {
+  grid-area: main;
+  font-family: $primary-font;
+  h5 {
+    display: flex;
+    justify-content: center;
+    color: $sub-color;
+  }
+  p {
+    color: $text-color;
+  }
 }
 
 .navigation-bar-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: bisque;
+  font-family: $primary-font;
+  .navigation-bar-main__to-do {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $nav-color;
+    }
+  }
 }

@@ -1,0 +1,47 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 10% 10% 60%;
+}
+
+.main-container__website-banner {
+  display: flex;
+  justify-content: center;
+  font-family: "Grape Nuts", cursive;
+  color: #f8b77c;
+  grid-area: 1/1/2/3;
+}
+
+.main-container {
+  font-family: "Grape Nuts", cursive;
+}
+
+h3 {
+  grid-area: 2/2/3/3;
+  display: flex;
+  justify-content: center;
+  background-color: papayawhip;
+}
+
+.main-container__sub-banner h5 {
+  grid-area: 3/2/4/4;
+  background-color: goldenrod;
+}
+
+.main-container__main-text {
+  grid-area: 4/2/3/5;
+}
+
+.navigation-bar-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=tourism-project.css.map */

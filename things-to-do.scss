@@ -1,31 +1,51 @@
-.grid-container {
+$primary-color: #f8b77c;
+$primary-font: "Grape Nuts", cursive;
+$sub-color: #3a9dbe;
+$text-color: #54b0c9;
+$nav-color: #bcc8b7;
+
+.main-container {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 20% 10% 10% 60%;
+  grid-template-areas:
+    "banner banner"
+    "nav  heading"
+    "nav  sub-heading"
+    "nav  main";
+  grid-area: banner;
 }
 
-.main-text {
-  grid-area: 4 / 2 / 5 / 3;
+.main-container__website-banner {
+  grid-area: banner;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  font-family: $primary-font;
+  color: $primary-color;
 }
 
-h1 {
-  grid-area: 1 / 1 / 2 / 3;
+.main-container__sub-banner {
+  grid-area: heading;
 }
 
-h3 {
-  grid-area: 2 / 2 / 3 / 3;
+.main-container__main-text {
+  grid-area: main;
+  font-family: $primary-font;
+  h5 {
+    display: flex;
+    justify-content: center;
+    color: $sub-color;
+  }
+  p {
+    color: $text-color;
+  }
 }
 
-.main-header {
-  grid-area: 3 / 2 / 4 / 3;
-}
-
-.navigation-bar {
-  grid-area: 2 / 1 / 5 / 2;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
+.navigation-bar-main {
+  font-family: $primary-font;
+  .navigation-bar-main__to-do {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $nav-color;
+    }
+  }
 }
