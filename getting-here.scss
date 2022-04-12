@@ -1,20 +1,31 @@
 @use "colour-font" as colour;
+@use "grid";
 
 .main-container {
   display: grid;
-  grid-template-areas:
-    "banner banner"
-    "nav  heading"
-    "nav  sub-heading"
-    "nav  main";
+  @include grid.grid;
 }
 
-.main-container__website-banner {
+.img {
+  grid-area: img;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-container__Website-banner {
   grid-area: banner;
   display: flex;
   justify-content: center;
   font-family: colour.$primary-font;
   color: colour.$primary-color;
+  font-size: 100px;
+  padding: 0%;
+  margin: 0%;
 }
 
 .main-container__sub-banner {
@@ -44,6 +55,9 @@ iframe {
   font-family: colour.$primary-font;
   .navigation-bar-main__to-do {
     list-style-type: none;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 30px;
     a {
       text-decoration: none;
       color: colour.$nav-color;

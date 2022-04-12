@@ -1,0 +1,8 @@
+@mixin grid {
+  grid-template-areas:
+    "img img"
+    "banner banner"
+    "nav  heading"
+    "nav  sub-heading"
+    "nav  main";
+}

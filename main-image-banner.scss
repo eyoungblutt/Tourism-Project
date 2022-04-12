@@ -1,0 +1,21 @@
+@mixin main-image {
+  grid-area: img;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin main-banner {
+  grid-area: banner;
+  display: flex;
+  justify-content: center;
+  font-family: colour.$primary-font;
+  color: colour.$primary-color;
+  font-size: 100px;
+  padding: 0%;
+  margin: 0%;
+}
