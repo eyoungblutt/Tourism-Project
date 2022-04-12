@@ -21,14 +21,15 @@
   grid-area: heading;
   color: colour.$sub-color;
   text-align: center;
+  font-family: colour.$primary-font;
 }
 
-.main-container__main-text {
+.main-text {
   grid-area: main;
   font-family: colour.$primary-font;
+  display: flex;
+  justify-content: center;
   h5 {
-    display: flex;
-    justify-content: center;
     color: colour.$sub-color;
   }
   p {
@@ -38,6 +39,8 @@
 
 .gallery-images {
   grid-area: main;
+  margin: 0px;
+  padding: 20px;
 }
 
 .navigation-bar-main {
@@ -47,6 +50,9 @@
     a {
       text-decoration: none;
       color: colour.$nav-color;
+      a:hover {
+        transform: scale(2);
+      }
     }
   }
 }
