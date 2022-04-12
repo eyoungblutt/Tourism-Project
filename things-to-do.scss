@@ -1,8 +1,4 @@
-$primary-color: #f8b77c;
-$primary-font: "Grape Nuts", cursive;
-$sub-color: #3a9dbe;
-$text-color: #54b0c9;
-$nav-color: #bcc8b7;
+@use "colour-font" as colour;
 
 .main-container {
   display: grid;
@@ -18,8 +14,8 @@ $nav-color: #bcc8b7;
   grid-area: banner;
   display: flex;
   justify-content: center;
-  font-family: $primary-font;
-  color: $primary-color;
+  font-family: colour.$primary-font;
+  color: colour.$primary-color;
 }
 
 .main-container__sub-banner {
@@ -28,24 +24,24 @@ $nav-color: #bcc8b7;
 
 .main-container__main-text {
   grid-area: main;
-  font-family: $primary-font;
+  font-family: colour.$primary-font;
   h5 {
     display: flex;
     justify-content: center;
-    color: $sub-color;
+    color: colour.$sub-color;
   }
   p {
-    color: $text-color;
+    color: colour.$text-color;
   }
 }
 
 .navigation-bar-main {
-  font-family: $primary-font;
+  font-family: colour.$primary-font;
   .navigation-bar-main__to-do {
     list-style-type: none;
     a {
       text-decoration: none;
-      color: $nav-color;
+      color: colour.$nav-color;
     }
   }
 }
