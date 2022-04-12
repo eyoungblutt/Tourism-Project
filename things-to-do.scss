@@ -25,14 +25,24 @@
 .main-container__main-text {
   grid-area: main;
   font-family: colour.$primary-font;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   h5 {
-    display: flex;
-    justify-content: center;
     color: colour.$sub-color;
+    text-align: center;
   }
   p {
     color: colour.$text-color;
   }
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+a:hover {
+  transform: scale(1.5);
 }
 
 .navigation-bar-main {

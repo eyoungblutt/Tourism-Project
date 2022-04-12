@@ -1,13 +1,12 @@
 @use "colour-font" as colour;
 
-main-container {
+.main-container {
   display: grid;
   grid-template-areas:
     "banner banner"
     "nav  heading"
     "nav  sub-heading"
     "nav  main";
-  grid-area: banner;
 }
 
 .main-container__website-banner {
