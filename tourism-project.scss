@@ -1,17 +1,25 @@
-@use "colour-font" as colour;
+@use "colour";
 @use "grid";
+@use "font";
+@use "mixin";
+@use "media";
 
 .main-container {
   display: grid;
   @include grid.grid;
+  @include media.phone {
+    @include grid.mobile-grid;
+  }
+  @include media.tablet {
+    @include grid.mobile-grid;
+  }
 }
 
 .img {
   grid-area: img;
   padding: 0%;
   margin: 0%;
-  display: flex;
-  justify-content: center;
+  @include mixin.flex;
   height: auto;
   width: 100%;
   object-fit: cover;
@@ -19,44 +27,63 @@
 
 .main-container__Website-banner {
   grid-area: banner;
-  display: flex;
-  justify-content: center;
-  font-family: colour.$primary-font;
+  @include mixin.flex;
+  font-family: font.$primary-font;
   color: colour.$primary-color;
   font-size: 100px;
   padding: 0%;
   margin: 0%;
+  @include media.phone {
+    font-size: 70px;
+  }
+  @include media.tablet {
+    font-size: 80px;
+  }
+  @include media.tablet-landscape {
+    font-size: 90px;
+  }
+  @include media.laptop {
+    font-size: 100px;
+  }
 }
 
 .main-container__sub-banner {
   grid-area: heading;
-  display: flex;
-  justify-content: center;
-  font-family: colour.$primary-font;
+  @include mixin.flex;
+  font-family: font.$primary-font;
   color: colour.$primary-color;
+  font-size: 60px;
 }
 
 .sub-heading {
   grid-area: sub-heading;
-  display: flex;
-  justify-content: center;
+  @include mixin.flex;
   color: colour.$sub-color;
-  font-family: colour.$primary-font;
+  font-family: font.$primary-font;
+  font-size: 40px;
 }
 
 .main-container__main-text {
   grid-area: main;
-  font-family: colour.$primary-font;
+  font-family: font.$primary-font;
+  font-size: 40px;
+  margin: 20px;
+  padding: 20px;
   p {
     color: colour.$text-color;
   }
   a {
-    display: flex;
-    justify-content: center;
+    @include mixin.flex;
   }
   .main-information {
     height: 200px;
     width: 200px;
+  }
+  &__right {
+    text-align: right;
+  }
+  &__left {
+    text-align: left;
   }
 }
 
@@ -78,7 +105,7 @@ form {
 
 .navigation-bar-main {
   grid-area: nav;
-  font-family: colour.$primary-font;
+  font-family: font.$primary-font;
   .navigation-bar-main__to-do {
     list-style-type: none;
     font-size: x-large;
@@ -87,6 +114,12 @@ form {
     a {
       text-decoration: none;
       color: colour.$nav-color;
+    }
+    @include media.phone {
+      display: inline;
+    }
+    @include media.tablet {
+      display: inline;
     }
   }
 }
