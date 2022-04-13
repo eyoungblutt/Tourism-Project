@@ -47,6 +47,31 @@
   p {
     color: colour.$text-color;
   }
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+a:hover {
+  transform: scale(1.5);
+}
+
+iframe {
+  height: 200px;
+  width: 200px;
+}
+
+.gallery-images {
+  grid-area: main;
+  margin: 0px;
+  padding: 20px;
+}
+
+form {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation-bar-main {
