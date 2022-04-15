@@ -3,8 +3,11 @@
 @use "font";
 @use "mixin";
 @use "media";
-// @use "background";
+@use "background";
 
+body {
+  @include background.background;
+}
 .main-container {
   display: grid;
   // @include background.background;
@@ -17,16 +20,16 @@
   }
 }
 
-.img {
-  grid-area: img;
-  padding: 0%;
-  margin: 0%;
-  @include mixin.flex;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  background-color: rgba(255, 192, 203, 0.448);
-}
+// .img {
+//   grid-area: img;
+//   padding: 0%;
+//   margin: 0%;
+//   @include mixin.flex;
+//   height: auto;
+//   width: 100%;
+//   object-fit: cover;
+//   background-color: rgba(255, 192, 203, 0.448);
+// }
 
 .main-container__Website-banner {
   grid-area: banner;
@@ -84,7 +87,13 @@
     width: 200px;
   }
   &__right {
+    display: inline-flex;
     text-align: right;
+    background-color: rgba(216, 237, 243, 0.407);
+    // border: 5px solid black;
+    margin-top: 10px;
+    box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
+    border-radius: 5px;
   }
   &__left {
     text-align: left;
@@ -117,11 +126,17 @@ form {
 .navigation-bar-main {
   grid-area: nav;
   font-family: font.$primary-font;
-  background-color: colour.$background-color;
+
   .navigation-bar-main__to-do {
+    background-color: colour.$background-color;
     list-style-type: none;
     font-size: x-large;
-    padding: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0;
     a {
       text-decoration: none;
       color: colour.$nav-color;
@@ -135,6 +150,7 @@ form {
     &:hover {
       text-decoration: underline;
       font-weight: bold;
+      border: 1px solid colour.$text-color;
     }
   }
 }

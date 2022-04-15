@@ -1,3 +1,10 @@
+body {
+  background-image: url("por-macquarie-nsw.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
 .main-container {
   display: grid;
   grid-template-areas: "img img" "banner banner" "nav  heading" "nav  sub-heading" "nav  main";
@@ -11,18 +18,6 @@
   .main-container {
     grid-template-areas: "img img" "banner banner" "nav nav" "heading heading" "sub-heading sub-heading" "main main";
   }
-}
-
-.img {
-  grid-area: img;
-  padding: 0%;
-  margin: 0%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  background-color: rgba(255, 192, 203, 0.448);
 }
 
 .main-container__Website-banner {
@@ -94,7 +89,12 @@
   width: 200px;
 }
 .main-container__main-text__right {
+  display: inline-flex;
   text-align: right;
+  background-color: rgba(216, 237, 243, 0.407);
+  margin-top: 10px;
+  box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
+  border-radius: 5px;
 }
 .main-container__main-text__left {
   text-align: left;
@@ -127,16 +127,18 @@ form {
 .navigation-bar-main {
   grid-area: nav;
   font-family: "Grape Nuts", cursive;
-  background-color: #cfe5ec;
 }
 .navigation-bar-main .navigation-bar-main__to-do {
+  background-color: rgba(207, 229, 236, 0.6588235294);
   list-style-type: none;
   font-size: x-large;
-  padding: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .navigation-bar-main .navigation-bar-main__to-do a {
   text-decoration: none;
-  color: #967f7f;
+  color: #255776;
 }
 @media only screen and (max-width: 576px) {
   .navigation-bar-main .navigation-bar-main__to-do {
@@ -151,4 +153,5 @@ form {
 .navigation-bar-main .navigation-bar-main__to-do:hover {
   text-decoration: underline;
   font-weight: bold;
+  border: 1px solid #54b0c9;
 }
