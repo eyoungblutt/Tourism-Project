@@ -10,7 +10,6 @@ body {
 }
 .main-container {
   display: grid;
-  // @include background.background;
   @include grid.grid;
   @include media.phone {
     @include grid.mobile-grid;
@@ -20,17 +19,6 @@ body {
   }
 }
 
-// .img {
-//   grid-area: img;
-//   padding: 0%;
-//   margin: 0%;
-//   @include mixin.flex;
-//   height: auto;
-//   width: 100%;
-//   object-fit: cover;
-//   background-color: rgba(255, 192, 203, 0.448);
-// }
-
 .main-container__Website-banner {
   grid-area: banner;
   @include mixin.flex;
@@ -39,7 +27,6 @@ body {
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  // background-color: rgba(255, 192, 203, 0.448);
   text-shadow: 2px 2px pink;
   @include media.phone {
     font-size: 70px;
@@ -61,6 +48,7 @@ body {
   font-family: font.$primary-font;
   color: colour.$primary-color;
   font-size: 60px;
+  text-shadow: 2px 2px pink;
 }
 
 .sub-heading {
@@ -69,6 +57,7 @@ body {
   color: colour.$sub-color;
   font-family: font.$primary-font;
   font-size: 40px;
+  text-shadow: 2px 2px rgb(163, 204, 224);
   img {
     width: 100%;
   }
@@ -83,10 +72,13 @@ body {
   p {
     color: colour.$sub-color;
   }
+
   a {
     @include mixin.flex;
   }
   .main-information {
+    display: inline-block;
+    align-items: center;
     height: 200px;
     width: 200px;
   }
@@ -94,7 +86,6 @@ body {
     display: inline-flex;
     text-align: left;
     background-color: rgba(216, 237, 243, 0.407);
-    // border: 5px solid black;
     margin-top: 10px;
     box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
     border-radius: 5px;
@@ -123,14 +114,33 @@ a:hover {
 
 form {
   grid-area: main;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: colour.$background-color;
+  border-radius: 5px;
+  grid-gap: 5px;
+}
+.label-text {
+  font-family: font.$primary-font;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  color: colour.$sub-color;
+  font-weight: bold;
+}
+.button {
+  border-radius: 5px;
+  &:hover {
+    color: colour.$text-color;
+  }
 }
 
 .navigation-bar-main {
   grid-area: nav;
   font-family: font.$primary-font;
-
+  display: flex;
   .navigation-bar-main__to-do {
     background-color: colour.$background-color;
     list-style-type: none;
@@ -138,9 +148,7 @@ form {
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
-    // position: -webkit-sticky;
-    // position: sticky;
-    // top: 0;
+
     a {
       text-decoration: none;
       color: colour.$nav-color;

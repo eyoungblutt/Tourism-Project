@@ -42,34 +42,32 @@
         </ul>
       </nav>
 
-      <h3 class="main-container__sub-banner">Contact Us</h3>
-
       <h5 class="sub-heading">We'd love to hear what you think!</h5>
 
       <form
-        clas="contact-form"
+        class="contact-form"
         action="https://formspree.io/f/xjvlavaw"
         method="POST"
       >
         <div>
-          <label>First Name</label>
+          <label class="label-text">First Name</label>
           <input type="text" name="firstName" id="firstName" required />
         </div>
         <div>
-          <label>Last Name</label>
+          <label class="label-text">Last Name</label>
           <input type="text" name="lastName" id="lastName" required />
         </div>
         <div>
-          <label>Age</label>
+          <label class="label-text">Age</label>
           <input type="number" name="age" id="age" min="1" max="99" required />
         </div>
         <div>
-          <label>Contact number</label>
+          <label class="label-text">Contact number</label>
           <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
         </div>
         <div>
-          <label>Enquiry type</label>
-          <select>
+          <label class="label-text">Enquiry type</label>
+          <select class="label-text">
             <option>Select</option>
             <option>Enquiry</option>
             <option>Review</option>
@@ -77,6 +75,7 @@
           </select>
         </div>
         <textarea
+          class="label-text"
           type="text"
           name="message"
           id="message"
@@ -87,9 +86,9 @@
 Let us know what you think.</textarea
         >
         <div class="form-buttons">
-          <button class="button" type="submit">Submit</button>
+          <button class="button label-text" type="submit">Submit</button>
 
-          <button class="button" type="reset">Clear</button>
+          <button class="button label-text" type="reset">Clear</button>
         </div>
       </form>
     </main>

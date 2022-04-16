@@ -7,16 +7,16 @@ body {
 
 .main-container {
   display: grid;
-  grid-template-areas: "img img" "banner banner" "nav  heading" "nav  sub-heading" "nav  main";
+  grid-template-areas: "img img" "banner banner" "nav  sub-heading" "nav  main";
 }
 @media only screen and (max-width: 576px) {
   .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "heading heading" "sub-heading sub-heading" "main main";
+    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "heading heading" "sub-heading sub-heading" "main main";
+    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
   }
 }
 
@@ -59,6 +59,7 @@ body {
   font-family: "Grape Nuts", cursive;
   color: #de8d40;
   font-size: 60px;
+  text-shadow: 2px 2px pink;
 }
 
 .sub-heading {
@@ -68,6 +69,7 @@ body {
   color: #196883;
   font-family: "Grape Nuts", cursive;
   font-size: 40px;
+  text-shadow: 2px 2px rgb(163, 204, 224);
 }
 .sub-heading img {
   width: 100%;
@@ -88,6 +90,8 @@ body {
   justify-content: center;
 }
 .main-container__main-text .main-information {
+  display: inline-block;
+  align-items: center;
   height: 200px;
   width: 200px;
 }
@@ -123,13 +127,35 @@ a:hover {
 
 form {
   grid-area: main;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(207, 229, 236, 0.6588235294);
+  border-radius: 5px;
+  grid-gap: 5px;
+}
+
+.label-text {
+  font-family: "Grape Nuts", cursive;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  color: #196883;
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 5px;
+}
+.button:hover {
+  color: #54b0c9;
 }
 
 .navigation-bar-main {
   grid-area: nav;
   font-family: "Grape Nuts", cursive;
+  display: flex;
 }
 .navigation-bar-main .navigation-bar-main__to-do {
   background-color: rgba(207, 229, 236, 0.6588235294);
