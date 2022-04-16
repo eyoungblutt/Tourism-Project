@@ -3,11 +3,13 @@
 @use "font";
 @use "mixin";
 @use "media";
-// @use "background";
+@use "background";
 
+body {
+  @include background.background;
+}
 .main-container {
   display: grid;
-  // @include background.background;
   @include grid.grid;
   @include media.phone {
     @include grid.mobile-grid;
@@ -15,17 +17,6 @@
   @include media.tablet {
     @include grid.mobile-grid;
   }
-}
-
-.img {
-  grid-area: img;
-  padding: 0%;
-  margin: 0%;
-  @include mixin.flex;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  background-color: rgba(255, 192, 203, 0.448);
 }
 
 .main-container__Website-banner {
@@ -36,7 +27,7 @@
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  background-color: rgba(255, 192, 203, 0.448);
+  text-shadow: 2px 2px pink;
   @include media.phone {
     font-size: 70px;
   }
@@ -57,6 +48,7 @@
   font-family: font.$primary-font;
   color: colour.$primary-color;
   font-size: 60px;
+  text-shadow: 2px 2px pink;
 }
 
 .sub-heading {
@@ -65,29 +57,41 @@
   color: colour.$sub-color;
   font-family: font.$primary-font;
   font-size: 40px;
+  text-shadow: 2px 2px rgb(163, 204, 224);
+  img {
+    width: 100%;
+  }
 }
 
 .main-container__main-text {
   grid-area: main;
   font-family: font.$primary-font;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px;
   padding: 20px;
   p {
-    color: colour.$text-color;
+    color: colour.$sub-color;
   }
+
   a {
     @include mixin.flex;
   }
   .main-information {
+    display: inline-block;
+    align-items: center;
     height: 200px;
     width: 200px;
   }
   &__right {
-    text-align: right;
+    display: inline-flex;
+    text-align: left;
+    background-color: rgba(216, 237, 243, 0.407);
+    margin-top: 10px;
+    box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
+    border-radius: 5px;
   }
   &__left {
-    text-align: left;
+    text-align: right;
   }
 }
 
@@ -101,7 +105,7 @@ a:hover {
   padding: 20px;
 }
 .individual-image {
-  border: 5px solid colour.$sub-color;
+  border: 2px solid colour.$sub-color;
   &:hover {
     border: 2px solid colour.$text-color;
     transform: scale(1.5);
@@ -110,18 +114,41 @@ a:hover {
 
 form {
   grid-area: main;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: colour.$background-color;
+  border-radius: 5px;
+  grid-gap: 5px;
+}
+.label-text {
+  font-family: font.$primary-font;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  color: colour.$sub-color;
+  font-weight: bold;
+}
+.button {
+  border-radius: 5px;
+  &:hover {
+    color: colour.$text-color;
+  }
 }
 
 .navigation-bar-main {
   grid-area: nav;
   font-family: font.$primary-font;
-  background-color: colour.$background-color;
+  display: flex;
   .navigation-bar-main__to-do {
+    background-color: colour.$background-color;
     list-style-type: none;
     font-size: x-large;
-    padding: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+
     a {
       text-decoration: none;
       color: colour.$nav-color;
@@ -135,6 +162,7 @@ form {
     &:hover {
       text-decoration: underline;
       font-weight: bold;
+      border: 1px solid colour.$text-color;
     }
   }
 }

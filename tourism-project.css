@@ -1,28 +1,23 @@
+body {
+  background-image: url("por-macquarie-nsw.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
 .main-container {
   display: grid;
-  grid-template-areas: "img img" "banner banner" "nav  heading" "nav  sub-heading" "nav  main";
+  grid-template-areas: "img img" "banner banner" "nav  sub-heading" "nav  main";
 }
 @media only screen and (max-width: 576px) {
   .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "heading heading" "sub-heading sub-heading" "main main";
+    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "heading heading" "sub-heading sub-heading" "main main";
+    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
   }
-}
-
-.img {
-  grid-area: img;
-  padding: 0%;
-  margin: 0%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  background-color: rgba(255, 192, 203, 0.448);
 }
 
 .main-container__Website-banner {
@@ -34,7 +29,7 @@
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  background-color: rgba(255, 192, 203, 0.448);
+  text-shadow: 2px 2px pink;
 }
 @media only screen and (max-width: 576px) {
   .main-container__Website-banner {
@@ -64,6 +59,7 @@
   font-family: "Grape Nuts", cursive;
   color: #de8d40;
   font-size: 60px;
+  text-shadow: 2px 2px pink;
 }
 
 .sub-heading {
@@ -73,31 +69,42 @@
   color: #196883;
   font-family: "Grape Nuts", cursive;
   font-size: 40px;
+  text-shadow: 2px 2px rgb(163, 204, 224);
+}
+.sub-heading img {
+  width: 100%;
 }
 
 .main-container__main-text {
   grid-area: main;
   font-family: "Grape Nuts", cursive;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px;
   padding: 20px;
 }
 .main-container__main-text p {
-  color: #54b0c9;
+  color: #196883;
 }
 .main-container__main-text a {
   display: flex;
   justify-content: center;
 }
 .main-container__main-text .main-information {
+  display: inline-block;
+  align-items: center;
   height: 200px;
   width: 200px;
 }
 .main-container__main-text__right {
-  text-align: right;
+  display: inline-flex;
+  text-align: left;
+  background-color: rgba(216, 237, 243, 0.407);
+  margin-top: 10px;
+  box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
+  border-radius: 5px;
 }
 .main-container__main-text__left {
-  text-align: left;
+  text-align: right;
 }
 
 a:hover {
@@ -111,7 +118,7 @@ a:hover {
 }
 
 .individual-image {
-  border: 5px solid #196883;
+  border: 2px solid #196883;
 }
 .individual-image:hover {
   border: 2px solid #54b0c9;
@@ -120,23 +127,47 @@ a:hover {
 
 form {
   grid-area: main;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(207, 229, 236, 0.6588235294);
+  border-radius: 5px;
+  grid-gap: 5px;
+}
+
+.label-text {
+  font-family: "Grape Nuts", cursive;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  color: #196883;
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 5px;
+}
+.button:hover {
+  color: #54b0c9;
 }
 
 .navigation-bar-main {
   grid-area: nav;
   font-family: "Grape Nuts", cursive;
-  background-color: #cfe5ec;
+  display: flex;
 }
 .navigation-bar-main .navigation-bar-main__to-do {
+  background-color: rgba(207, 229, 236, 0.6588235294);
   list-style-type: none;
   font-size: x-large;
-  padding: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .navigation-bar-main .navigation-bar-main__to-do a {
   text-decoration: none;
-  color: #967f7f;
+  color: #255776;
 }
 @media only screen and (max-width: 576px) {
   .navigation-bar-main .navigation-bar-main__to-do {
@@ -151,4 +182,5 @@ form {
 .navigation-bar-main .navigation-bar-main__to-do:hover {
   text-decoration: underline;
   font-weight: bold;
+  border: 1px solid #54b0c9;
 }
