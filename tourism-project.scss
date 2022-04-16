@@ -29,37 +29,32 @@ body {
   margin: 0%;
   text-shadow: 2px 2px pink;
   @include media.phone {
-    font-size: 70px;
+    font-size: 45px;
   }
   @include media.tablet {
-    font-size: 80px;
+    font-size: 45px;
   }
   @include media.tablet-landscape {
-    font-size: 90px;
+    font-size: 80px;
   }
   @include media.laptop {
     font-size: 100px;
   }
 }
 
-.main-container__sub-banner {
-  grid-area: heading;
-  @include mixin.flex;
-  font-family: font.$primary-font;
-  color: colour.$primary-color;
-  font-size: 60px;
-  text-shadow: 2px 2px pink;
-}
-
 .sub-heading {
   grid-area: sub-heading;
   @include mixin.flex;
-  color: colour.$sub-color;
   font-family: font.$primary-font;
+  color: colour.$primary-color;
   font-size: 40px;
-  text-shadow: 2px 2px rgb(163, 204, 224);
-  img {
-    width: 100%;
+  text-shadow: 2px 2px pink;
+  max-width: 700px;
+  @include media.phone {
+    font-size: 30px;
+  }
+  @include media.tablet {
+    font-size: 35px;
   }
 }
 
@@ -69,8 +64,34 @@ body {
   font-size: 20px;
   margin: 20px;
   padding: 20px;
+  font-weight: bold;
+  max-width: 700px;
   p {
     color: colour.$sub-color;
+  }
+  .main-container__main-text__paragraph {
+    grid-area: main;
+    font-family: font.$primary-font;
+    font-size: 20px;
+    margin: 0px;
+    padding: 20px;
+    color: colour.$sub-color;
+    background-color: colour.$background-color;
+    border-radius: 5px;
+    max-width: 700px;
+    font-weight: bold;
+  }
+  &__right {
+    display: inline-flex;
+    text-align: left;
+    background-color: colour.$background-color;
+    margin-top: 10px;
+    box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  &__left {
+    text-align: right;
   }
 
   a {
@@ -79,28 +100,30 @@ body {
   .main-information {
     display: inline-block;
     align-items: center;
-    height: 200px;
-    width: 200px;
-  }
-  &__right {
-    display: inline-flex;
-    text-align: left;
-    background-color: rgba(216, 237, 243, 0.407);
-    margin-top: 10px;
-    box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
-    border-radius: 5px;
-  }
-  &__left {
-    text-align: right;
+    @include media.phone {
+      height: 200;
+      width: 200;
+    }
+    @include media.tablet {
+      height: 200px;
+      width: 200px;
+    }
+    @include media.tablet-landscape {
+      height: 400px;
+      width: 400px;
+    }
   }
 }
 
-a:hover {
-  transform: scale(1.5);
+.to-do-links:hover {
+  zoom: 1.5;
+  border: 4px solid colour.$primary-color;
+  padding: 5px;
 }
 
 .gallery-images {
   grid-area: main;
+  max-width: 800px;
   margin: 0px;
   padding: 20px;
 }
@@ -109,10 +132,16 @@ a:hover {
   &:hover {
     border: 2px solid colour.$text-color;
     transform: scale(1.5);
+    @include media.phone {
+      transform: scale(1.25);
+    }
+    @include media.tablet {
+      transform: scale(1.25);
+    }
   }
 }
 
-form {
+.contact-form {
   grid-area: main;
   display: inline-flex;
   flex-direction: column;
@@ -121,6 +150,18 @@ form {
   background-color: colour.$background-color;
   border-radius: 5px;
   grid-gap: 5px;
+  max-width: 700px;
+  padding: 10px;
+  @include media.phone {
+    padding: 0px;
+    border-radius: 1px;
+    grid-gap: 1px;
+  }
+  @include media.tablet {
+    padding: 0px;
+    border-radius: 1px;
+    grid-gap: 1px;
+  }
 }
 .label-text {
   font-family: font.$primary-font;
@@ -129,9 +170,16 @@ form {
   padding: 20px;
   color: colour.$sub-color;
   font-weight: bold;
+  @include media.phone {
+    font-size: 15px;
+  }
 }
 .button {
   border-radius: 5px;
+  @include media.phone {
+    padding: 2px;
+  }
+
   &:hover {
     color: colour.$text-color;
   }
@@ -148,6 +196,17 @@ form {
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
+    @include media.phone {
+      font-size: medium;
+      align-items: center;
+      padding: 2px;
+      margin: 0px;
+    }
+    @include media.tablet {
+      font-size: large;
+      padding: 2px;
+      margin: 0px;
+    }
 
     a {
       text-decoration: none;
