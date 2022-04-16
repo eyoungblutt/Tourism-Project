@@ -29,7 +29,7 @@ body {
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  background-color: rgba(255, 192, 203, 0.448);
+  text-shadow: 2px 2px pink;
 }
 @media only screen and (max-width: 576px) {
   .main-container__Website-banner {
@@ -69,16 +69,19 @@ body {
   font-family: "Grape Nuts", cursive;
   font-size: 40px;
 }
+.sub-heading img {
+  width: 100%;
+}
 
 .main-container__main-text {
   grid-area: main;
   font-family: "Grape Nuts", cursive;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px;
   padding: 20px;
 }
 .main-container__main-text p {
-  color: #54b0c9;
+  color: #196883;
 }
 .main-container__main-text a {
   display: flex;
@@ -90,14 +93,14 @@ body {
 }
 .main-container__main-text__right {
   display: inline-flex;
-  text-align: right;
+  text-align: left;
   background-color: rgba(216, 237, 243, 0.407);
   margin-top: 10px;
   box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
   border-radius: 5px;
 }
 .main-container__main-text__left {
-  text-align: left;
+  text-align: right;
 }
 
 a:hover {
@@ -111,7 +114,7 @@ a:hover {
 }
 
 .individual-image {
-  border: 5px solid #196883;
+  border: 2px solid #196883;
 }
 .individual-image:hover {
   border: 2px solid #54b0c9;

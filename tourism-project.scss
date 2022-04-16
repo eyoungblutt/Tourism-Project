@@ -39,7 +39,8 @@ body {
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  background-color: rgba(255, 192, 203, 0.448);
+  // background-color: rgba(255, 192, 203, 0.448);
+  text-shadow: 2px 2px pink;
   @include media.phone {
     font-size: 70px;
   }
@@ -68,16 +69,19 @@ body {
   color: colour.$sub-color;
   font-family: font.$primary-font;
   font-size: 40px;
+  img {
+    width: 100%;
+  }
 }
 
 .main-container__main-text {
   grid-area: main;
   font-family: font.$primary-font;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px;
   padding: 20px;
   p {
-    color: colour.$text-color;
+    color: colour.$sub-color;
   }
   a {
     @include mixin.flex;
@@ -88,7 +92,7 @@ body {
   }
   &__right {
     display: inline-flex;
-    text-align: right;
+    text-align: left;
     background-color: rgba(216, 237, 243, 0.407);
     // border: 5px solid black;
     margin-top: 10px;
@@ -96,7 +100,7 @@ body {
     border-radius: 5px;
   }
   &__left {
-    text-align: left;
+    text-align: right;
   }
 }
 
@@ -110,7 +114,7 @@ a:hover {
   padding: 20px;
 }
 .individual-image {
-  border: 5px solid colour.$sub-color;
+  border: 2px solid colour.$sub-color;
   &:hover {
     border: 2px solid colour.$text-color;
     transform: scale(1.5);
