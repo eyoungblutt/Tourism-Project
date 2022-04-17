@@ -97,7 +97,7 @@ body {
   max-width: 700px;
   font-weight: bold;
 }
-.main-container__main-text__right {
+.main-container__main-text__left {
   display: inline-flex;
   text-align: left;
   background-color: rgba(207, 229, 236, 0.6588235294);
@@ -105,9 +105,6 @@ body {
   box-shadow: 2px 2px rgba(160, 195, 243, 0.968);
   border-radius: 5px;
   padding: 10px;
-}
-.main-container__main-text__left {
-  text-align: right;
 }
 .main-container__main-text a {
   display: flex;
