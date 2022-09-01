@@ -1,6 +1,8 @@
 @mixin background {
   background-image: url("por-macquarie-nsw.jpg");
+  filter: url("por-macquarie-nsw.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+ 
 }

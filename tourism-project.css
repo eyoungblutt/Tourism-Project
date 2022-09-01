@@ -1,35 +1,11 @@
-body {
-  background-image: url("por-macquarie-nsw.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-.main-container {
-  display: grid;
-  grid-template-areas: "img img" "banner banner" "nav  sub-heading" "nav  main";
-}
-@media only screen and (max-width: 576px) {
-  .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .main-container {
-    grid-template-areas: "img img" "banner banner" "nav nav" "sub-heading sub-heading" "main main";
-  }
-}
-
 .main-container__Website-banner {
-  grid-area: banner;
   display: flex;
   justify-content: center;
   font-family: "Grape Nuts", cursive;
-  color: #de8d40;
+  color: black;
   font-size: 100px;
   padding: 0%;
   margin: 0%;
-  text-shadow: 2px 2px pink;
 }
 @media only screen and (max-width: 576px) {
   .main-container__Website-banner {
@@ -53,7 +29,6 @@ body {
 }
 
 .sub-heading {
-  grid-area: sub-heading;
   display: flex;
   justify-content: center;
   font-family: "Grape Nuts", cursive;
@@ -74,7 +49,6 @@ body {
 }
 
 .main-container__main-text {
-  grid-area: main;
   font-family: "Grape Nuts", cursive;
   font-size: 20px;
   margin: 20px;
@@ -86,7 +60,6 @@ body {
   color: #196883;
 }
 .main-container__main-text .main-container__main-text__paragraph {
-  grid-area: main;
   font-family: "Grape Nuts", cursive;
   font-size: 20px;
   margin: 0px;
@@ -165,7 +138,6 @@ body {
 }
 
 .contact-form {
-  grid-area: main;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -218,12 +190,14 @@ body {
 }
 
 .navigation-bar-main {
-  grid-area: nav;
   font-family: "Grape Nuts", cursive;
   display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(207, 229, 236, 0.6588235294);
 }
 .navigation-bar-main .navigation-bar-main__to-do {
-  background-color: rgba(207, 229, 236, 0.6588235294);
   list-style-type: none;
   font-size: x-large;
   padding: 10px;
@@ -260,7 +234,83 @@ body {
   }
 }
 .navigation-bar-main .navigation-bar-main__to-do:hover {
-  text-decoration: underline;
   font-weight: bold;
-  border: 1px solid #54b0c9;
+  background-color: darkblue;
 }
+.navigation-bar-main .navigation-bar-main__to-do:hover a:hover {
+  color: #f2f2f2;
+}
+
+.carousel {
+  width: 80vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 1200px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.629);
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover, .carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+/*# sourceMappingURL=tourism-project.css.map */
