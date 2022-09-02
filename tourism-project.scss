@@ -1,64 +1,46 @@
 @use "colour";
-// @use "grid";
 @use "font";
 @use "mixin";
 @use "media";
 @use "background";
 
 
-.main-container {
-  // display: grid;
-  // @include grid.grid;
-  @include media.phone {
-    // @include grid.mobile-grid;
-  }
-  @include media.tablet {
-    // @include grid.mobile-grid;
-  }
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  opacity: .9;
 }
-
-
 .main-container__Website-banner {
-  // grid-area: banner;
   @include mixin.flex;
   font-family: font.$primary-font;
-  color: black;
-  font-size: 100px;
-  padding: 0%;
-  margin: 0%;
-  //tourism-projecttext-shadow: 2px 2px pink;
-  @include media.phone {
-    font-size: 45px;
-  }
-  @include media.tablet {
-    font-size: 45px;
-  }
-  @include media.tablet-landscape {
-    font-size: 80px;
-  }
-  @include media.laptop {
-    font-size: 100px;
-  }
+  color: white;
+  opacity: .8;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  font-size: 200px;
+  padding: 0px;
+  margin: 0px;
+  
+@include media.phone {
+  font-size: 45px;
 }
-
-.sub-heading {
-  // grid-area: sub-heading;
-  @include mixin.flex;
-  font-family: font.$primary-font;
-  color: colour.$primary-color;
-  font-size: 40px;
-  text-shadow: 2px 2px pink;
-  max-width: 700px;
-  @include media.phone {
-    font-size: 30px;
-  }
-  @include media.tablet {
-    font-size: 35px;
-  }
+@include media.tablet {
+  font-size: 45px;
+}
+@include media.tablet-landscape {
+  font-size: 80px;
+}
+@include media.laptop {
+  font-size: 100px;
+}
 }
 
 .main-container__main-text {
-  // grid-area: main;
   font-family: font.$primary-font;
   font-size: 20px;
   margin: 20px;
@@ -69,7 +51,6 @@
     color: colour.$sub-color;
   }
   .main-container__main-text__paragraph {
-    // grid-area: main;
     font-family: font.$primary-font;
     font-size: 20px;
     margin: 0px;
@@ -138,7 +119,6 @@
 }
 
 .contact-form {
-  // grid-area: main;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -182,18 +162,21 @@
 }
 
 .navigation-bar-main {
+  position: absolute;
+  z-index: 1;
   font-family: font.$primary-font;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-color: colour.$background-color;
-  // max-width: 100vh;
+  padding: 0px;
+  margin: 0px;
+  opacity: .8;
   .navigation-bar-main__to-do {
     list-style-type: none;
     font-size: x-large;
     padding: 10px;
-    border-radius: 5px;
+    // border-radius: 5px;
     font-weight: bold;
     @include media.phone {
       font-size: medium;
@@ -209,7 +192,7 @@
 
     a {
       text-decoration: none;
-      color: colour.$nav-color;
+      color: white;
     }
     @include media.phone {
       display: inline;
@@ -218,12 +201,10 @@
       display: inline;
     }
     &:hover{
-      // text-decoration: underline;
       font-weight: bold;
-      background-color: darkblue;
-      
       a:hover {
-        color: #f2f2f2;
+        color: #e0dede;
+
       }
     }
     
@@ -239,10 +220,6 @@
   align-content: center;
 }
 
-// .images {
-// width: 400px;
-// height: 400px;
-// }
 .carousel > ul {
   margin: 0;
   padding: 0;

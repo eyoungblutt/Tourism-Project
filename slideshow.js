@@ -17,15 +17,3 @@ button.addEventListener("click", () => {
 })
 })
 
-// const images = ["Breakwall-800x600.jpg", "Port-Macquarie-Camel-Safari-by-Lindsay-Moller-Productions.jpg", "por-macquarie-nsw.jpg"];
-// images.className = "images";
-// const carousel = document.querySelector(".carousel");
-// const interval = setInterval(function(){
-//   startCarousel();
-// }, 3000);
-// var index = 1;
-
-// startCarousel = ()=>{
-//   carousel.style.backgroundImage = `url(${images[index++]})`
-//   if(index > images.length -1) index = 0;
-// }
